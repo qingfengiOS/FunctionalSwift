@@ -14,6 +14,9 @@
 		FD9A465B20E33C8700C6454A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD9A465920E33C8700C6454A /* LaunchScreen.storyboard */; };
 		FD9A466620E33C8700C6454A /* FunctionalSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9A466520E33C8700C6454A /* FunctionalSwiftTests.swift */; };
 		FD9A467120E33C8700C6454A /* FunctionalSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9A467020E33C8700C6454A /* FunctionalSwiftUITests.swift */; };
+		FDF3E6BC20E4B9DC00394A37 /* BattleShip.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF3E6BB20E4B9DC00394A37 /* BattleShip.swift */; };
+		FDF3E6BE20E4B9FC00394A37 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF3E6BD20E4B9FC00394A37 /* BaseViewController.swift */; };
+		FDF3E6C020E4C1CD00394A37 /* PackgeCoreImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF3E6BF20E4C1CD00394A37 /* PackgeCoreImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,9 @@
 		FD9A466C20E33C8700C6454A /* FunctionalSwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FunctionalSwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD9A467020E33C8700C6454A /* FunctionalSwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunctionalSwiftUITests.swift; sourceTree = "<group>"; };
 		FD9A467220E33C8700C6454A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FDF3E6BB20E4B9DC00394A37 /* BattleShip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleShip.swift; sourceTree = "<group>"; };
+		FDF3E6BD20E4B9FC00394A37 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		FDF3E6BF20E4C1CD00394A37 /* PackgeCoreImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackgeCoreImage.swift; sourceTree = "<group>"; wrapsLines = 1; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +103,10 @@
 		FD9A464F20E33C8600C6454A /* FunctionalSwift */ = {
 			isa = PBXGroup;
 			children = (
+				FDF3E6BA20E4B8D200394A37 /* FunctionalSwift */,
 				FD9A465020E33C8600C6454A /* AppDelegate.swift */,
 				FD9A465220E33C8600C6454A /* ViewController.swift */,
+				FDF3E6BD20E4B9FC00394A37 /* BaseViewController.swift */,
 				FD9A465420E33C8600C6454A /* Main.storyboard */,
 				FD9A465720E33C8700C6454A /* Assets.xcassets */,
 				FD9A465920E33C8700C6454A /* LaunchScreen.storyboard */,
@@ -123,6 +131,15 @@
 				FD9A467220E33C8700C6454A /* Info.plist */,
 			);
 			path = FunctionalSwiftUITests;
+			sourceTree = "<group>";
+		};
+		FDF3E6BA20E4B8D200394A37 /* FunctionalSwift */ = {
+			isa = PBXGroup;
+			children = (
+				FDF3E6BB20E4B9DC00394A37 /* BattleShip.swift */,
+				FDF3E6BF20E4C1CD00394A37 /* PackgeCoreImage.swift */,
+			);
+			path = FunctionalSwift;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,6 +273,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDF3E6BC20E4B9DC00394A37 /* BattleShip.swift in Sources */,
+				FDF3E6BE20E4B9FC00394A37 /* BaseViewController.swift in Sources */,
+				FDF3E6C020E4C1CD00394A37 /* PackgeCoreImage.swift in Sources */,
 				FD9A465320E33C8600C6454A /* ViewController.swift in Sources */,
 				FD9A465120E33C8600C6454A /* AppDelegate.swift in Sources */,
 			);
