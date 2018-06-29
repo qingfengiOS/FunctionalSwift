@@ -2,7 +2,7 @@
 //  PackgeCoreImage.swift
 //  FunctionalSwift
 //
-//  Created by 李一平 on 2018/6/28.
+//  Created by qingfengiOS on 2018/6/28.
 //  Copyright © 2018年 qingfengiOS. All rights reserved.
 //
 
@@ -38,8 +38,13 @@ class PackgeCoreImage: BaseViewController {
 //        let blurredImage = blur(radius: blurRadius)(image!)
 //        let overlaidImage = colorOverlay(color: overlayColor)(blurredImage)
 //        imageView.image = UIImage(ciImage: overlaidImage)
+            
             //链式调用：
-            let resultImage = self.colorOverlay(color: overlayColor)(self.blur(radius: blurRadius)(image!))
+//            let resultImage = self.colorOverlay(color: overlayColor)(self.blur(radius: blurRadius)(image!))
+            
+            //复合函数调用
+            let myFilter1 = self.composeFilters(filter1: self.blur(radius: blurRadius), self.colorOverlay(color: overlayColor))
+            let resultImage = myFilter1(image!)
             
             
             DispatchQueue.main.async {//主线程操作UI
@@ -51,6 +56,9 @@ class PackgeCoreImage: BaseViewController {
                 imageView.image = UIImage(ciImage: resultImage)
             }
         }
+        
+        print("add(1)(2) = \(add(1)(2))")
+        
     }
     
     /**
@@ -141,5 +149,32 @@ class PackgeCoreImage: BaseViewController {
         }
     }
     
+    
+    
+    //MARK:-复合函数
+    /**
+     //链式调用：
+     let resultImage = self.colorOverlay(color: overlayColor)(self.blur(radius: blurRadius)(image!))
+     
+     然而，由于括号错综复杂，这些代码很快失去了可读性。更好的解决方式是自定义一个运算符来组合滤镜。为了定义该运算符，首先我们要定义一个用于组合滤镜的函数：
+     */
+    func composeFilters(filter1: @escaping Filter, _ filter2: @escaping Filter) -> Filter {
+        return { image in
+            filter2(filter1(image))
+        }
+        /**
+         composeFilters 函数接受两个 Filter 类型的参数，并返回一个新定义的滤镜。这个复合滤镜接受一个 CIImage 类型的图像参数，然后将该参数传递给 filter1，取得返回值之后再传递给 filter2。我们可以使用复合函数来定义复合滤镜，就像下面这样：
+         
+         */
+        
+    }
+    
+    
+    //MARK:-柯里化
+    func add(_ x: Int) -> (Int) -> Int {
+        return { y in
+            x + y
+        }
+    }
     
 }

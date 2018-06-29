@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  FunctionalSwift
 //
-//  Created by 李一平 on 2018/6/27.
+//  Created by qingfengiOS on 2018/6/27.
 //  Copyright © 2018年 qingfengiOS. All rights reserved.
 //
 
@@ -14,6 +14,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     @IBOutlet weak var tableView: UITableView!
     var dataArray = ["BattleShip",
                      "PackgeCoreImage",
+                     "MapFilterReduce",
                      ]
     
     //MARK:-View Life Cycle
