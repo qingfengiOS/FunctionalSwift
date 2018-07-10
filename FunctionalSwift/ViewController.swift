@@ -15,6 +15,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     var dataArray = ["BattleShip",
                      "PackgeCoreImage",
                      "MapFilterReduce",
+                     "TheBinarySearchTree",
                      ]
     
     //MARK:-View Life Cycle

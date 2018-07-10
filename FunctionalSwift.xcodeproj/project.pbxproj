@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FD933E6A20F4B22100C5CADF /* TheBinarySearchTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD933E6920F4B22100C5CADF /* TheBinarySearchTree.swift */; };
 		FD9A465120E33C8600C6454A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9A465020E33C8600C6454A /* AppDelegate.swift */; };
 		FD9A465320E33C8600C6454A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9A465220E33C8600C6454A /* ViewController.swift */; };
 		FD9A465620E33C8600C6454A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD9A465420E33C8600C6454A /* Main.storyboard */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FD933E6920F4B22100C5CADF /* TheBinarySearchTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheBinarySearchTree.swift; sourceTree = "<group>"; };
 		FD9A464D20E33C8600C6454A /* FunctionalSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FunctionalSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD9A465020E33C8600C6454A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FD9A465220E33C8600C6454A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 				FDF3E6BB20E4B9DC00394A37 /* BattleShip.swift */,
 				FDF3E6BF20E4C1CD00394A37 /* PackgeCoreImage.swift */,
 				FDAECC0620E61BFE008E03EE /* MapFilterReduce.swift */,
+				FD933E6920F4B22100C5CADF /* TheBinarySearchTree.swift */,
 			);
 			path = FunctionalSwift;
 			sourceTree = "<group>";
@@ -279,6 +282,7 @@
 				FDAECC0720E61BFE008E03EE /* MapFilterReduce.swift in Sources */,
 				FDF3E6BC20E4B9DC00394A37 /* BattleShip.swift in Sources */,
 				FDF3E6BE20E4B9FC00394A37 /* BaseViewController.swift in Sources */,
+				FD933E6A20F4B22100C5CADF /* TheBinarySearchTree.swift in Sources */,
 				FDF3E6C020E4C1CD00394A37 /* PackgeCoreImage.swift in Sources */,
 				FD9A465320E33C8600C6454A /* ViewController.swift in Sources */,
 				FD9A465120E33C8600C6454A /* AppDelegate.swift in Sources */,
