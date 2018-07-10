@@ -64,6 +64,12 @@ class MapFilterReduce: BaseViewController {
         let res4 = getSwiftFiles2(files: exampleFiles)
         print("res4 = \(res4)")
         
+        print(sum(xs: [1, 2, 3, 4]))
+        print(prettyPrintArray(xs: ["one", "two", "three"]))
+        
+        print(sumUsingReduce(xs: [1, 2, 3, 4]))
+        print(prettyPrintArrayUsingReduce(xs: ["one", "two", "three"]))
+        
     }
     
     //MARK:-Map
@@ -104,8 +110,54 @@ class MapFilterReduce: BaseViewController {
         })
     }
     
+    //MARK:-Reduce
+    func sum(xs: [Int]) -> Int {
+        var result: Int = 0
+        for x in xs {
+            result += x
+        }
+        return result
+    }
+    
+    func prettyPrintArray(xs: [String]) -> String {
+        var result: String = "Entries in the array xs:\n"
+        for x in xs {
+            result = " " + result + x + "\n"
+        }
+        return result
+    }
+    
+    
+    //使用reduce定义上面的函数
+    func sumUsingReduce(xs: [Int]) -> Int {
+        return xs.reduce(initial: 0, combine: { (result, x) in
+            result + x
+        })
+    }
+    
+    func prettyPrintArrayUsingReduce(xs: [String]) -> String {
+        return xs.reduce(initial: " Entries in the array xs:\n", combine:{ (result, x) in
+            " " + result + x + "\n"
+        })
+    }
 }
 
+/*
+ sum:, prettyPrintArray: 这些函数有什么共同点呢？它们都将变量 result 初始化为某个值。随后对输入数组 xs 的每一项进行遍历，最后以某种方式更新结果。为了定义一个可以体现所需类型的泛型函数，我们需要对两份信息进行抽象：赋给 result 变量的初始值，和用于在每一次循环中更新 result 的函数:
+ */
+extension Array {
+    func reduce<T>(initial: T, combine:(T, Element) -> T) -> T {
+        var result = initial
+        for x in self {
+            result = combine(result, x)
+        }
+        return result
+    }
+    /*
+     这个函数的泛型体现在两个方面：对于任意 [Element] 类型的输入数组来说，它会计算一个类型为 T 的返回值。这么做的前提是，首先需要一个 T 类型的初始值 (赋给 result 变量)，以及一个用于更新 for 循环中变量值的函数 combine: (T, Element) -> T。在一些像 OCaml 和 Haskell 一样的函数式语言中，reduce 函数被称为 fold 或 fold_left
+     */
+    
+}
 
 
 
